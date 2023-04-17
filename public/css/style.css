@@ -1,10 +1,10 @@
 :root {
   --color-white: #fff;
-  --color-light-gray: 
-  --color-dark: #111;
+  --color-light-gray:
+    --color-dark: #111;
   --font-size: 1em;
- --color-bg-message: linear-gradient(180deg, rgba(236,241,255,1) 0%, rgba(203,212,230,1) 100%);
- --color-bg-my-message: linear-gradient(90deg, rgb(210, 215, 230) 0%, rgb(184, 195, 218) 100%);
+  --color-bg-message: linear-gradient(180deg, rgba(236, 241, 255, 1) 0%, rgba(203, 212, 230, 1) 100%);
+  --color-bg-my-message: linear-gradient(0deg, rgb(210, 215, 230) 0%, rgb(184, 195, 218) 100%);
 }
 
 * {
@@ -38,21 +38,21 @@ header {
   flex-direction: column;
   align-items: flex-end;
 
-  
+
 }
 
 input {
   padding: 1em;
-  
+
   /* border-radius: 100%; */
   border: 1px solid black;
   width: 100%;
-/* width: 100%; */
+  /* width: 100%; */
 
 }
-input[type="text"] {
 
-}
+input[type="text"] {}
+
 main {
   top: 0;
   min-height: 100%;
@@ -60,7 +60,8 @@ main {
   position: relative;
   padding-bottom: 5em;
 }
-form{
+
+form {
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -69,10 +70,11 @@ form{
 
 .message-container {
   margin: 1em;
-display: flex;
+  display: flex;
 
 
 }
+
 .message-list {
   display: flex;
   flex-direction: column;
@@ -97,29 +99,36 @@ ul.message-list {
 }
 
 .message.my-message {
-align-self: flex-end;
-background: var(--color-bg-my-message);
+  align-self: flex-end;
+  background: var(--color-bg-my-message);
 }
 
 
 
 
-.message::marker{
-
-}
+.message::marker {}
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1000;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
