@@ -1,1 +1,6 @@
 # teamchat
+
+## Concept 
+
+Chatroulette/Omeagmle
+
