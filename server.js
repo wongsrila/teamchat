@@ -18,7 +18,8 @@ io.on("connection", (socket) => {
   console.log(socket.id);
 
   socket.on("send-message", (msg) => {
-    socket.broadcast.emit("receive-message", msg);
+    console.log(msg)
+    io.emit("receive-message", msg);
   });
 
   socket.on("disconnect", () => {
