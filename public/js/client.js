@@ -14,9 +14,9 @@ form.addEventListener("submit", function (e) {
 });
 
 socket.on("message", function (msg) {
-  var item = document.createElement("li");
+  const item = document.createElement("li");
   console.log(msg);
   item.textContent = msg;
-  messages.appendChild(item);
+  ul.appendChild(item);
   window.scrollTo(0, document.body.scrollHeight);
 });
