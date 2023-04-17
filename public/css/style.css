@@ -4,6 +4,7 @@
   --color-dark: #111;
   --font-size: 1em;
  --color-bg-message: linear-gradient(180deg, rgba(236,241,255,1) 0%, rgba(203,212,230,1) 100%);
+ --color-bg-my-message: linear-gradient(90deg, rgb(210, 215, 230) 0%, rgb(184, 195, 218) 100%);
 }
 
 * {
@@ -81,6 +82,7 @@ display: flex;
 
 ul.message-list {
   list-style-type: none;
+  width: 100%;
 }
 
 .message {
@@ -93,6 +95,12 @@ ul.message-list {
   max-width: 90%;
   appearance: none;
 }
+
+.message.my-message {
+align-self: flex-end;
+background: var(--color-bg-my-message);
+}
+
 
 
 
