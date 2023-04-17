@@ -12,6 +12,10 @@ form.addEventListener("submit", function (e) {
   }
 });
 
+socket.on("connect", () => {
+  console.log(socket.id);
+});
+
 socket.on("receive-message", function (msg) {
   const item = document.createElement("li");
   item.textContent = msg;
