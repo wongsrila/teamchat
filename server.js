@@ -1,31 +1,28 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const http = require('http');
+const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
+app.use(express.static("public"));
 
-app.use(express.static('public'))
-
-
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
 });
 
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  io.on("message", (message)=> {
-console.log(message)
+io.on("connection", (socket) => {
+  console.log("a user connected");
 
-  })
+  socket.on("message", (message) => {
+    console.log(message);
+  });
 
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
+  socket.on("disconnect", () => {
+    console.log("user disconnected");
   });
 });
 
 server.listen(3000, () => {
-  console.log('listening on *:3000');
+  console.log("listening on *:3000");
 });
-
