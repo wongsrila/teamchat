@@ -19,6 +19,7 @@ socket.on("connect", () => {
 socket.on("receive-message", function (msg) {
   const item = document.createElement("li");
   item.textContent = msg;
+  item.setAttribute("class", "message")
   ul.appendChild(item);
   window.scrollTo(0, document.body.scrollHeight);
 });
